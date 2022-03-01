@@ -1,0 +1,96 @@
+:root {
+  --light-blue: #dcdfef;
+	--blue: #3a457f;
+  --dark-blue: #323b6d;
+  --darkest-blue: #1a1f39;
+  --red: #5c2a32;
+	--white: #fff;
+	--black: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+  color: var(--white);
+  background-image: url("/assets/pattern.png");
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 2em;
+}
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 3.125rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+p {
+  line-height: 1.4;
+  margin: 0.4em 0 1em 0;
+}
+form {
+  color: var(--black);
+  background-color: var(--light-blue);
+}
+/* .article-form {
+  background-image: url(/assets/pattern-red.png);
+} */
+.members {
+  margin-left: 4em;
+}
+div {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 1.5em;
+}
+.dissapear {
+  display: none;
+}
+fieldset {
+  padding: 2em;
+  border: 0;
+}
+fieldset label {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+fieldset input,
+fieldset select,
+fieldset textarea {
+  width: 20rem;
+}
+fieldset button {
+  margin-top: 1em;
+  padding: 1em;
+  color: var(--white);
+  background-color: var(--darkest-blue);
+  border: none;
+  width: 8em;
+  cursor: pointer;
+}
+
+fieldset button:hover {
+  background-color: var(--dark-blue);
+}
+
+input {
+  padding: 0.6em;
+}
+
+article {
+  background-color: var(--darkest-blue);
+  padding: 2em;
+  color: var(--white);
+}
