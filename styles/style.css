@@ -15,7 +15,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   box-sizing: border-box;
   color: var(--white);
-  background-image: url("/assets/pattern.png");
+  background-image: url("../assets/pattern.png");
 }
 main {
   display: grid;
