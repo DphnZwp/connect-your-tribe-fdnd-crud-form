@@ -11,34 +11,36 @@ memberForm.addEventListener('submit', (event) => {
 
   let member = {
     memberId: Number(memberForm.elements.memberId.value),
-		squadId: Number(memberForm.elements.squadId.value),
+    squadId: Number(memberForm.elements.squadId.value),
     type: memberForm.elements.type.value,
     nickname: memberForm.elements.nickname.value,
     name: memberForm.elements.name.value,
     prefix: memberForm.elements.prefix.value,
     surname: memberForm.elements.surname.value,
-		avatar: memberForm.elements.avatar.value,
-		githubHandle: memberForm.elements.githubHandle.value,
+    avatar: memberForm.elements.avatar.value,
+    githubHandle: memberForm.elements.githubHandle.value,
     bio: memberForm.elements.bio.value,
-		url: memberForm.elements.url.value,
+    url: memberForm.elements.url.value,
   }
+  console.log('member to be inserted:')
+  console.log(member)
 
   postJson(apiBaseUrl + '/member', member).then((response) => {
     container.innerHTML += renderMember(response[0])
   })
 
-	// memberForm.elements.memberId.value =
-	// memberForm.elements.squadId.value =
-	// memberForm.elements.type.value =
-	// memberForm.elements.nickname.value =
-	// memberForm.elements.name.value =
-	// memberForm.elements.prefix.value =
-	// memberForm.elements.surname.value =
-	// memberForm.elements.avatar.value =
-	// memberForm.elements.githubHandle.value =
-	// memberForm.elements.bio.value =
-	// memberForm.elements.url.value =
-	// null
+  // memberForm.elements.memberId.value =
+  // memberForm.elements.squadId.value =
+  // memberForm.elements.type.value =
+  // memberForm.elements.nickname.value =
+  // memberForm.elements.name.value =
+  // memberForm.elements.prefix.value =
+  // memberForm.elements.surname.value =
+  // memberForm.elements.avatar.value =
+  // memberForm.elements.githubHandle.value =
+  // memberForm.elements.bio.value =
+  // memberForm.elements.url.value =
+  // null
   // authorForm.classList.add('dissapear')
 })
 
@@ -67,7 +69,11 @@ async function postJson(url, data) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   })
-    .then((response) => response.json())
+    .then((response) => {
+      console.log('response')
+      console.log(response)
+      return response.json()
+    })
     .then((body) => body.data)
     .catch((error) => error)
 }
