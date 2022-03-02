@@ -7,70 +7,90 @@
 	--white: #fff;
 	--black: #000;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'DM Sans', sans-serif;
   box-sizing: border-box;
   color: var(--white);
   background: url("../assets/pattern.png");
 }
+
 main {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  padding: 2em;
+  grid-template-columns: 1fr;
 }
+
 h1,
 h2,
 p {
   margin: 0;
   padding: 0;
 }
+
 h1 {
   font-size: 3.125rem;
 }
+
 h2 {
   font-size: 2.5rem;
 }
+
 p {
   line-height: 1.4;
   margin: 0.4em 0 1em 0;
 }
+
+.crud-form {
+  width: 100%;
+}
+
 form {
   color: var(--black);
   background-color: var(--light-blue);
+  width: 100%;
 }
-/* .article-form {
-  background-image: url(/assets/pattern-red.png);
-} */
+
 .members {
-  margin-left: 4em;
+  margin: 2em 0 2em 0;
 }
+
+.members>h2 {
+  margin-left: 2rem;
+}
+
 div {
   margin-top: 1em;
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: 1fr;
   gap: 1.5em;
 }
+
 .dissapear {
   display: none;
 }
+
 fieldset {
   padding: 2em;
   border: 0;
 }
+
 fieldset label {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.4rem;
 }
+
 fieldset input,
 fieldset select,
 fieldset textarea {
   width: 20rem;
 }
+
 fieldset button {
   margin-top: 1em;
   padding: 1em;
@@ -89,8 +109,53 @@ input {
   padding: 0.6em;
 }
 
+fieldset select {
+  padding: 0.6em;
+  width: 21.2rem;
+}
+
+option {
+  width: 20rem;
+}
+
 article {
   background-color: var(--darkest-blue);
-  padding: 2em;
+  padding: 2rem;
   color: var(--white);
+}
+
+@media (min-width: 70em) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 5em;
+  }
+
+  .crud-form {
+    width: max-content;
+  }
+  
+  form {
+    color: var(--black);
+    background-color: var(--light-blue);
+    width: min-content;
+  }
+
+  .members {
+    margin: 0 0 0 4em;
+  }
+
+  .members>h2 {
+    margin-left: 0;
+  }
+
+  div {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width: 100em) {
+	main {
+    padding: 5em 10em;
+  }
 }
