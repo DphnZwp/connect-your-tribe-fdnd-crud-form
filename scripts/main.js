@@ -1,8 +1,8 @@
 const apiBaseUrl = 'https://tribe.api.fdnd.nl/v1'
-const container = document.querySelector('main section div')
+const container = document.querySelector('.members')
 const memberForm = document.querySelector('form#memberForm')
 
-// Fetch quotes and authors and show them in the container
+// Fetch members and show them in the container
 fetchJson(apiBaseUrl + '/member').then(parseMembers)
 
 // Hook up controls for the member form
@@ -28,20 +28,6 @@ memberForm.addEventListener('submit', (event) => {
   postJson(apiBaseUrl + '/member', member).then((response) => {
     container.innerHTML += renderMember(response[0])
   })
-
-  // memberForm.elements.memberId.value =
-  // memberForm.elements.squadId.value =
-  // memberForm.elements.type.value =
-  // memberForm.elements.nickname.value =
-  // memberForm.elements.name.value =
-  // memberForm.elements.prefix.value =
-  // memberForm.elements.surname.value =
-  // memberForm.elements.avatar.value =
-  // memberForm.elements.githubHandle.value =
-  // memberForm.elements.bio.value =
-  // memberForm.elements.url.value =
-  // null
-  // authorForm.classList.add('dissapear')
 })
 
 /**
@@ -79,7 +65,7 @@ async function postJson(url, data) {
 }
 
 /**
- * Parses the passed data stream from the members API and renders all quotes into
+ * Parses the passed data stream from the members API and renders all members into
  * the HTML container which is defined in the main scope
  * @param {*} data a json object containing the members from the API
  */
@@ -95,5 +81,5 @@ function parseMembers(data) {
  * @returns an HTML string containing the quote
  */
 function renderMember(member) {
-  return `<article><h3>${member.name} ${member.surname}</h3></article>`
+  return `<article class="member"><h3>${member.name} ${member.surname}</h3></article>`
 }

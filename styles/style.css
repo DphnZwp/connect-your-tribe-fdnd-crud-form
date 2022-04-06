@@ -16,13 +16,11 @@
 body {
   font-family: 'DM Sans', sans-serif;
   box-sizing: border-box;
-  color: var(--white);
-  background: url("../assets/pattern.png");
+  background-color: var(--darkest-blue);
 }
 
 main {
   display: grid;
-  grid-template-columns: 1fr;
 }
 
 h1,
@@ -34,6 +32,7 @@ p {
 
 h1 {
   font-size: 3.125rem;
+  color: var(--white);
 }
 
 h2 {
@@ -41,116 +40,96 @@ h2 {
 }
 
 p {
+  color: var(--white);
   line-height: 1.4;
-  margin: 0.4em 0 1em 0;
+  margin: 0.4em 0 1.5em 0;
 }
 
-.crud-form {
-  width: 100%;
-}
-
-form {
-  color: var(--black);
-  background-color: var(--light-blue);
-  width: 100%;
-}
-
-.members {
-  margin: 2em 0 2em 0;
-}
-
-.members>h2 {
-  margin-left: 2rem;
-}
-
-div {
-  margin-top: 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5em;
-}
-
-.dissapear {
-  display: none;
-}
-
-fieldset {
-  padding: 2em;
-  border: 0;
-}
-
-fieldset label {
-  display: block;
-  font-size: 0.8rem;
-  margin-top: 0.4rem;
-}
-
-fieldset input,
-fieldset select,
-fieldset textarea {
-  width: 20rem;
-}
-
-fieldset button {
-  margin-top: 1em;
+button {
+  margin-top: 1.5em;
   padding: 1em;
+  
   color: var(--white);
   background-color: var(--darkest-blue);
   border: none;
+  border-radius: 2em;
   width: 8em;
   cursor: pointer;
 }
 
-fieldset button:hover {
+button:hover {
   background-color: var(--dark-blue);
+}
+
+.crud-form {
+  grid-template-columns: 1fr;
+}
+
+.crud-form>article {
+  margin-right: 2em;
+}
+
+img {
+  width: 100%;
+  height: 53em;
+  display: block;
+  object-fit: cover;
+}
+
+form {
+  background-color: var(--light-blue);
+  padding: 3em;
+}
+
+input,
+select,
+fieldset textarea {
+  width: auto;
+}
+
+label {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
 }
 
 input {
   padding: 0.6em;
 }
 
-fieldset select {
+select {
   padding: 0.6em;
-  width: 21.2rem;
 }
 
 option {
   width: 20rem;
 }
 
-article {
-  background-color: var(--darkest-blue);
+.member {
   padding: 2rem;
-  color: var(--white);
+  background-color: var(--light-blue);
 }
 
 @media (min-width: 70em) {
   main {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
     padding: 5em;
   }
 
   .crud-form {
-    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
   }
   
   form {
-    color: var(--black);
     background-color: var(--light-blue);
-    width: min-content;
+    display: flex;
+    flex-direction: column;
   }
 
   .members {
-    margin: 0 0 0 4em;
-  }
-
-  .members>h2 {
-    margin-left: 0;
-  }
-
-  div {
-    grid-template-columns: repeat(5,1fr);
+    margin-top: 3em;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 

@@ -12,17 +12,16 @@
 <body>
   <main>
 		<section class="crud-form">
-      <article class="article-form">
-        <h1>Crud form</h1>
-			  <p>Een member toevoegen in de API.</p>
-      </article>
-			
+			<article>
+				<h1>Crud form</h1>
+				<p>Een member toevoegen in de API.</p>
+				<img src="assets/developer.jpg" alt="">
+			</article>
+
 			<form id="memberForm" action="https://tribe.api.fdnd.nl/v1/member" method="post">
-				<fieldset id="member">
-	
-					<label for="memberId">MemberId</label>
+					<label for="memberId">memberId</label>
 					<input type="number" id="memberId">
-	
+					
 					<label for="squadId">SquadId</label>
 					<input type="number" id="squadId">
 					
@@ -55,16 +54,14 @@
 	
 					<label for="url">Url (url)</label>
 					<input type="text" id="url">
-	
-					<button type="submit">Add</button>
-					<button type="reset">Cancel</button>
-				</fieldset>
+					<div>
+						<button type="submit">Add</button>
+						<button type="reset">Cancel</button>
+					</div>
 			</form>
 		</section>
 
     <section class="members">
-      <h2>Members in de API</h2>
-      <div></div>
     </section>
   </main>
 	<script src="scripts/main.js"></script>
