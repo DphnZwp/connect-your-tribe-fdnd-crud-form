@@ -14,7 +14,7 @@ Een webbformulier om members toe te voegen van de tribe api.
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
+![MacBook Air PSD Mockup](https://user-images.githubusercontent.com/69635977/162035532-4344d10d-43f5-4bc9-ba2d-d7e6f7c27b85.png)
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Kenmerken
