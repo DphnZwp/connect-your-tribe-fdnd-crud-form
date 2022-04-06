@@ -1,9 +1,9 @@
-const apiBaseUrl = 'https://tribe.api.fdnd.nl/v1'
+const apiBaseUrl = 'https://tribe.api.fdnd.nl/v1/member'
 const container = document.querySelector('.members')
 const memberForm = document.querySelector('form#memberForm')
 
 // Fetch members and show them in the container
-fetchJson(apiBaseUrl + '/member').then(parseMembers)
+fetchJson(apiBaseUrl).then(parseMembers)
 
 // Hook up controls for the member form
 memberForm.addEventListener('submit', (event) => {
@@ -25,7 +25,7 @@ memberForm.addEventListener('submit', (event) => {
   console.log('member to be inserted:')
   console.log(member)
 
-  postJson(apiBaseUrl + '/member', member).then((response) => {
+  postJson(apiBaseUrl, member).then((response) => {
     container.innerHTML += renderMember(response[0])
   })
 })
@@ -78,7 +78,7 @@ function parseMembers(data) {
 /**
  * Renders a member in to HTML elements
  * @param {*} member the member to be rendered
- * @returns an HTML string containing the quote
+ * @returns an HTML string containing the member
  */
 function renderMember(member) {
   return `<article class="member"><h3>${member.name} ${member.surname}</h3></article>`
