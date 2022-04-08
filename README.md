@@ -24,8 +24,27 @@ Met dit formulier kan je een member toevoegen in de html van de website door mid
 - CSS
 - JavaScript
 - REST API
+## Installatie & Gebruik
+1. Clone of download deze respository.
+2. Ga naar de root directory van het project.
+3. Open het index.html bestand. Hier kan je de eerste pagina zien van de website.
 
-## Installatie
+Hieronder zijn commandlines van HTTPS en SSH die je kunt uitvoeren in de opdrachtprompt om het project te clonen en om naar de root directory te gaan.
+
+**Installeren met HTTPS**
+
+```
+git clone https://github.com/DphnZwp/connect-your-tribe-fdnd-crud-form
+cd https://github.com/DphnZwp/connect-your-tribe-fdnd-crud-form
+```
+
+**Installeren met SSH**
+
+```
+git@github.com:DphnZwp/connect-your-tribe-fdnd-crud-form
+cd connect-your-tribe-fdnd-crud-form
+
+```
 
 ## Gebruik
 
