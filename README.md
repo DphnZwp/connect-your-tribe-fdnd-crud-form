@@ -1,7 +1,7 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # CRUD Form
-Een webbformulier om members toe te voegen van de tribe api.
+Met dit webformulier kan je een member toevoegen in de html van de website door middel van de tribe api.
 
 ## Inhoudsopgave
 
@@ -13,7 +13,7 @@ Een webbformulier om members toe te voegen van de tribe api.
   * [Licentie](#licentie)
 
 ## Beschrijving
-Met dit formulier kan je een member toevoegen in de html van de website door middel van de tribe api.
+Het doel is om met een formulier een member toe te voegen in de html van de website door middel van de tribe api. 
 
 [🌐 https://daphnecrudform.student.fdnd.nl/](https://daphnecrudform.student.fdnd.nl/)
 
