@@ -81,5 +81,5 @@ function parseMembers(data) {
  * @returns an HTML string containing the member
  */
 function renderMember(member) {
-  return `<article class="member"><h3>${member.name} ${member.surname}</h3></article>`
+  return `<article class="member"><h3>${member.name} ${member.prefix} ${member.surname}</h3></article>`
 }
